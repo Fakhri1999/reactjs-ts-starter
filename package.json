@@ -1,6 +1,15 @@
 {
   "name": "reactjs-ts-starter",
   "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx,ts,tsx",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
   "dependencies": {
     "@chakra-ui/react": "^2.4.4",
     "@emotion/react": "^11.10.5",
@@ -23,7 +32,6 @@
     "react-lines-ellipsis": "^0.15.3",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.6.1",
-    "react-scripts": "5.0.1",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
@@ -36,6 +44,7 @@
     "@types/react-lines-ellipsis": "^0.15.1",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
+    "@vitejs/plugin-react": "^3.1.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^16.1.0",
@@ -48,18 +57,10 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.2",
     "prettier": "2.6.2",
-    "react-app-rewired": "^2.2.1",
-    "typescript": "4.5.5"
-  },
-  "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject",
-    "lint": "eslint . --ext js,jsx,ts,tsx",
-    "lint:fix": "yarn lint --fix",
-    "format": "prettier --write .",
-    "prepare": "husky install"
+    "typescript": "^4.9.3",
+    "vite": "^4.1.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-tsconfig-paths": "^4.0.5"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --fix",
